@@ -1,0 +1,59 @@
+@import "public/styles/colors";
+
+.Item {
+    border: 2px solid $indigo;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 15px;
+    width: 150px;
+    max-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    header {
+        h3 {
+            margin: 0;
+            padding: 0 0 5px;
+            color: $indigo;
+            border-bottom: 1px solid $orange;
+        }
+        .type-container {
+            p {
+                margin: 0;
+                color: $blue-gray;
+            }
+        }
+    }
+    .main-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        svg {
+            path {
+                fill: $orange;
+            }
+        }
+    }
+    .info-container {
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .icon {
+                svg {
+                    path {
+                        fill: $blue-gray;
+                    }
+                }
+            }
+            .status-text {
+                color: $blue-gray;
+            }
+        }
+    }
+    .settings-container {
+        display: flex;
+        justify-content: center;
+    }
+}

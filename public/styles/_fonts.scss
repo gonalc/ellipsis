@@ -1,0 +1,40 @@
+@import './colors';
+
+$text-small: 10px;
+$text-normal: 16px;
+$text-medium: 24px;
+$text-large: 36px;
+
+.small-title,
+.text-normal {
+    font-size: $text-normal;
+}
+
+.text-small {
+    font-size: $text-small;
+}
+
+.text-medium {
+    font-size: $text-medium;
+}
+
+.text-large {
+    font-size: $text-large;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.text-center {
+    text-align: center;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+    &:hover {
+        color: $orange;
+    }
+}

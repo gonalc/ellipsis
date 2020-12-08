@@ -1,0 +1,11 @@
+@import 'public/styles/ellipsis';
+
+.App {
+    height: 100vh;
+    display: flex;
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+}

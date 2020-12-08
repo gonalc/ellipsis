@@ -1,0 +1,32 @@
+@import 'public/styles/colors';
+@import 'public/styles/css3-mixins';
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+button,
+.btn {
+    border: none;
+    padding: 5px 10px;
+    background-color: $indigo;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: box-shadow .3s ease-in-out;
+    &:focus {
+        outline: none;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        @include box-shadow(0, 0, 0, 2px, $orange);
+    }
+}
