@@ -1,3 +1,17 @@
+# Ellipsis Test
+
+Platform where you can display the projects you have created. So far is just static content.
+
+## My projects
+All the projects created by yourself.
+
+## Shared with me
+All the projects that somebody else has shared with you.
+
+## Favorites
+All the projects you have marked as favorites.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
