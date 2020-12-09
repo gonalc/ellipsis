@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Redirect, Route, RouteProps, Switch, withRouter } from 'react-router-dom';
+import { Link, Redirect, Route, RouteProps, Switch, withRouter } from 'react-router-dom';
 import './App.scss';
 import Sidebar from './components/Sidebar/Sidebar';
 import Projects from './containers/Projects/Projects';
@@ -23,7 +23,7 @@ function App({ location }: RouteProps) {
     } else if (pathname.indexOf('shared-with-me') >= 0) {
       // Find the files other users have shared with me
       displayProjects = myself!.sharedWithMe.map((p: number): ICustomObject => getProjectById(p));
-    // } else if (pathname.indexOf('my-projects') >= 0) {
+      // } else if (pathname.indexOf('my-projects') >= 0) {
     } else {
       // Find my own projects
       displayProjects = db.filter((f) => f.owner === myself!.id);
@@ -39,7 +39,7 @@ function App({ location }: RouteProps) {
 
   useEffect(() => {
     if (myself) getProjects();
-  }, [location,myself]);
+  }, [location, myself]);
 
   if (!myself) return <p>Loading...</p>;
   return (
@@ -47,7 +47,11 @@ function App({ location }: RouteProps) {
       <Sidebar avatar={myself.avatar} name={myself.name} />
       <AddButton />
       <div className="content">
-        {isMobile && <h1 className='mobile-title'>Ellipsis</h1>}
+        {isMobile && (
+          <Link to='/projects'>
+            <h1 className='mobile-title'>Ellipsis</h1>
+          </Link>
+        )}
         <Switch>
           <Route path='/project/:project_id' render={() => <SingleProject />} />
           <Route path='/projects' render={() => <Projects projects={projects} />} />

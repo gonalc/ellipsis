@@ -52,4 +52,13 @@
             }
         }
     }
+    &.on-card {
+        position: relative;
+        top: 0;
+        right: 0;
+        .icon-container {
+            padding: 5px;
+            box-shadow: none;
+        }
+    }
 }

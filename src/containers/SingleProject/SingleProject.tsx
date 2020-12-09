@@ -7,7 +7,7 @@ import { db, users } from '../../data';
 import { ICustomObject, IUser } from '../../models';
 import './SingleProject.scss';
 import moment from 'moment';
-import SettingsMenu from './SettingsMenu/SettingsMenu';
+import SettingsMenu from '../../components/SettingsMenu/SettingsMenu';
 
 const SingleProject = ({ match }: RouteChildrenProps) => {
     const { project_id }: any = match!.params;

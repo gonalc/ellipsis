@@ -41,5 +41,11 @@
     .settings-container {
         display: flex;
         justify-content: center;
+        position: relative;
+        .settings-handler-container {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     }
 }

@@ -6,7 +6,11 @@ import './SettingsMenu.scss';
 
 type States = 'entering' | 'entered' | 'exiting' | 'exited';
 
-const SettingsMenu = () => {
+type SettingsMenuProps = {
+    onCard?: boolean;
+}
+
+const SettingsMenu = ({ onCard }: SettingsMenuProps) => {
     const [showMenu, setShowMenu] = useState<boolean>(false);
 
     const duration = 300;
@@ -23,13 +27,17 @@ const SettingsMenu = () => {
         exited: { opacity: 0 },
     };
 
+    const cog = (
+        <div className="icon-container" onClick={() => setShowMenu(!showMenu)}>
+            <FontAwesomeIcon style={{
+                transform: `rotate(${showMenu ? '90deg' : '0'})`,
+            }} icon={faCog} />
+        </div>
+    );
+
     return (
-        <div className='SettingsMenu'>
-            <div className="icon-container" onClick={() => setShowMenu(!showMenu)}>
-                <FontAwesomeIcon style={{
-                    transform: `rotate(${showMenu ? '90deg' : '0'})`,
-                }} icon={faCog} />
-            </div>
+        <div className={`SettingsMenu ${onCard ? 'on-card' : ''}`}>
+            {!onCard && cog}
             <Transition in={showMenu} timeout={duration} mountOnEnter unmountOnExit>
                 {(state: States) => (
                     <div
@@ -56,6 +64,7 @@ const SettingsMenu = () => {
                     </div>
                 )}
             </Transition>
+            {onCard && cog}
         </div>
     );
 };

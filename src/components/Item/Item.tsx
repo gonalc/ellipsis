@@ -6,6 +6,7 @@ import './Item.scss';
 import { faCheck, faHourglassHalf, faMap, faShapes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import Status from '../Status/Status';
+import SettingsMenu from '../SettingsMenu/SettingsMenu';
 
 type ItemProps = {
     project: ICustomObject;
@@ -35,16 +36,15 @@ const Item = ({ project }: ItemProps) => {
             <div className="info-container">
                 <div className="status">
                     <Status status={project.status} />
-                    {/* <div className={`icon ${project.status}`}>
-                        <FontAwesomeIcon icon={project.status === 'uploaded' ? faCheck : faHourglassHalf} />
-                    </div>
-                    <p className="status-text text-normal">{project.status === 'uploaded' ? 'Uploaded' : 'In progress'}</p> */}
                 </div>
             </div>
             <div className="settings-container">
                 <Link to={`/project/${project.id}`}>
                     <button className="btn">See more</button>
                 </Link>
+                <div className="settings-handler-container">
+                    <SettingsMenu onCard />
+                </div>
             </div>
         </div>
     );
