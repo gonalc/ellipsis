@@ -2,6 +2,7 @@
 
 .Sidebar {
     width: 250px;
+    flex-shrink: 0;
     background-color: $indigo;
     color: $white;
     nav {

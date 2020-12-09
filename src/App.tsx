@@ -14,15 +14,14 @@ function App({ location }: RouteProps) {
 
   const getProjects = () => {
     const { pathname } = location!;
-    let displayProjects: ICustomObject[] = [];
+    let displayProjects: ICustomObject[] = db;
     if (pathname.indexOf('favorites') >= 0) {
       // Find the favorite files of the user
       displayProjects = myself!.favorites.map((p: number): ICustomObject => getProjectById(p));
     } else if (pathname.indexOf('shared-with-me') >= 0) {
       // Find the files other users have shared with me
       displayProjects = myself!.sharedWithMe.map((p: number): ICustomObject => getProjectById(p));
-    } else {
-      // It is the Home page or My Projects page
+    } else if (pathname.indexOf('my-projects') >= 0) {
       // Find my own projects
       displayProjects = db.filter((f) => f.owner === myself!.id);
     }
