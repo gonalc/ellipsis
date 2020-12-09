@@ -3,7 +3,12 @@ import { NavLink } from 'react-router-dom';
 import useScreenSize from '../../hooks/screen-size';
 import './Sidebar.scss';
 
-const Sidebar = () => {
+type SidebarProps = {
+    avatar: string;
+    name: string;
+}
+
+const Sidebar = ({ avatar, name }: SidebarProps) => {
     const [show, setShow] = useState<boolean>(false);
     const { isMobile } = useScreenSize();
     return (
@@ -19,6 +24,9 @@ const Sidebar = () => {
                 <h1 className="text-center">
                     <NavLink to='/'>Ellipsis</NavLink>
                 </h1>
+                <div className="avatar-container">
+                    <img src={avatar} alt={name} title={name} />
+                </div>
                 <nav>
                     <ul>
                         <li>

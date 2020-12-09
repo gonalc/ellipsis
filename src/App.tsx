@@ -7,6 +7,7 @@ import SingleProject from './containers/SingleProject/SingleProject';
 import { db, getProjectById, login } from './data';
 import { ICustomObject, IUser } from './models';
 import useScreenSize from './hooks/screen-size';
+import AddButton from './components/AddButton/AddButton';
 
 function App({ location }: RouteProps) {
   const [myself, setMyself] = useState<IUser>();
@@ -43,7 +44,8 @@ function App({ location }: RouteProps) {
   if (!myself) return <p>Loading...</p>;
   return (
     <div className="App">
-      <Sidebar />
+      <Sidebar avatar={myself.avatar} name={myself.name} />
+      <AddButton />
       <div className="content">
         {isMobile && <h1 className='mobile-title'>Ellipsis</h1>}
         <Switch>
