@@ -7,6 +7,7 @@ import { db, users } from '../../data';
 import { ICustomObject, IUser } from '../../models';
 import './SingleProject.scss';
 import moment from 'moment';
+import SettingsMenu from './SettingsMenu/SettingsMenu';
 
 const SingleProject = ({ match }: RouteChildrenProps) => {
     const { project_id }: any = match!.params;
@@ -51,6 +52,7 @@ const SingleProject = ({ match }: RouteChildrenProps) => {
     if (!project) return <p>Loading...</p>;
     return (
         <div className='SingleProject'>
+            <SettingsMenu />
             <div className="title-container">
                 <h1>{project.name} <span className="vertical-separator">|</span> <span className="project-type light">{project.type}</span></h1>
                 {isFav && (

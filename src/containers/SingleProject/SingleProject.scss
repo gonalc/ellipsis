@@ -35,6 +35,7 @@
         width: 800px;
         height: 380px;
         position: relative;
+        z-index: -1;
         @extend .box;
         overflow: hidden;
         img {

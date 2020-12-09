@@ -43,7 +43,7 @@ const Item = ({ project }: ItemProps) => {
             </div>
             <div className="settings-container">
                 <Link to={`/project/${project.id}`}>
-                    <button className="btn">Settings</button>
+                    <button className="btn">See more</button>
                 </Link>
             </div>
         </div>

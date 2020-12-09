@@ -6,6 +6,8 @@
     flex-shrink: 0;
     background-color: $indigo;
     color: $white;
+    position: relative;
+    z-index: 300;
     transition: all .3s ease-in-out;
     nav {
         ul {
@@ -59,13 +61,13 @@
     border-radius: 2000px;
     background-color: $indigo;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 300;
+    z-index: 340;
     cursor: pointer;
     .bar {
         width: 15px;
