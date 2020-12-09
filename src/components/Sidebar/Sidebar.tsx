@@ -14,7 +14,7 @@ const Sidebar = () => {
                 <ul>
                     <li>
                         <NavLink
-                            to='/my-projects'
+                            to='/projects/my-projects'
                             className='nav-link'
                             activeClassName='active'
                         >
@@ -23,7 +23,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <NavLink
-                            to='/shared-with-me'
+                            to='/projects/shared-with-me'
                             className='nav-link'
                             activeClassName='active'
                         >
@@ -32,7 +32,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <NavLink
-                            to='/favorites'
+                            to='/projects/favorites'
                             className='nav-link'
                             activeClassName='active'
                         >

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, RouteProps, Switch, withRouter } from 'react-router-dom';
+import { Redirect, Route, RouteProps, Switch, withRouter } from 'react-router-dom';
 import './App.scss';
 import Item from './components/Item/Item';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -21,7 +21,8 @@ function App({ location }: RouteProps) {
     } else if (pathname.indexOf('shared-with-me') >= 0) {
       // Find the files other users have shared with me
       displayProjects = myself!.sharedWithMe.map((p: number): ICustomObject => getProjectById(p));
-    } else if (pathname.indexOf('my-projects') >= 0) {
+    // } else if (pathname.indexOf('my-projects') >= 0) {
+    } else {
       // Find my own projects
       displayProjects = db.filter((f) => f.owner === myself!.id);
     }
@@ -43,10 +44,10 @@ function App({ location }: RouteProps) {
     <div className="App">
       <Sidebar />
       <div className="content">
-        {myself && <h1 className='name'>Hello, {myself.name}</h1>}
         <Switch>
           <Route path='/project/:project_id' render={() => <SingleProject />} />
-          <Route path='/' render={() => <Projects projects={projects} />} />
+          <Route path='/projects' render={() => <Projects projects={projects} />} />
+          <Redirect to='projects/my-projects' />
         </Switch>
       </div>
     </div>

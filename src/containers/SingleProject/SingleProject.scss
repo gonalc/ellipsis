@@ -1,4 +1,5 @@
 @import "public/styles/colors";
+@import "public/styles/general";
 
 .SingleProject {
     box-sizing: border-box;
@@ -50,28 +51,36 @@
             }
         }
     }
-    .creation-container {
-        p, h3 {
-            color: $indigo;
-        }
-        .owner-container {
-            display: flex;
-            align-items: center;
-            .avatar {
-                overflow: hidden;
-                width: 80px;
-                height: 80px;
-                border-radius: 3000px;
-                margin-right: 20px;
-                img {
-                    height: 100%;
-                    object-fit: cover;
-                }
+    .bottom-container {
+        display: flex;
+        .creation-container {
+            box-sizing: border-box;
+            padding: 10px 20px;
+            margin: 20px 0;
+            max-width: 800px;
+            @extend .box;
+            p, h3 {
+                color: $indigo;
             }
-            .text-container {
-                p,
-                .name {
-                    margin: 0;
+            .owner-container {
+                display: flex;
+                align-items: center;
+                .avatar {
+                    overflow: hidden;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 3000px;
+                    margin-right: 20px;
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .text-container {
+                    p,
+                    .name {
+                        margin: 0;
+                    }
                 }
             }
         }

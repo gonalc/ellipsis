@@ -55,7 +55,7 @@ export const db: ICustomObject[] = [
     {
         id: 1,
         type: 'map',
-        name: 'Hola',
+        name: 'Important Document',
         status: 'in-progress',
         position: [40, -3],
         owner: 1,
@@ -65,7 +65,7 @@ export const db: ICustomObject[] = [
     {
         id: 2,
         type: 'map',
-        name: 'Que tal',
+        name: 'Awesome File',
         status: 'uploaded',
         position: [12, 3],
         owner: 2,
@@ -75,7 +75,7 @@ export const db: ICustomObject[] = [
     {
         id: 3,
         type: 'shape',
-        name: 'Como estas',
+        name: 'Final Project',
         status: 'in-progress',
         position: [34, -13],
         owner: 3,
@@ -85,7 +85,7 @@ export const db: ICustomObject[] = [
     {
         id: 4,
         type: 'map',
-        name: 'Hola',
+        name: 'University Work',
         status: 'uploaded',
         position: [21, 10],
         owner: 1,
@@ -95,7 +95,7 @@ export const db: ICustomObject[] = [
     {
         id: 5,
         type: 'shape',
-        name: 'Todo bien',
+        name: 'Data Report',
         status: 'uploaded',
         position: [4, -30],
         owner: 2,
@@ -105,7 +105,7 @@ export const db: ICustomObject[] = [
     {
         id: 6,
         type: 'shape',
-        name: 'Genial',
+        name: 'Awesome graphics',
         status: 'in-progress',
         position: [90, 2],
         owner: 3,
@@ -115,7 +115,7 @@ export const db: ICustomObject[] = [
     {
         id: 7,
         type: 'shape',
-        name: 'Perfecto',
+        name: 'Geographic Information',
         status: 'uploaded',
         position: [41, -9],
         owner: 1,
@@ -125,7 +125,7 @@ export const db: ICustomObject[] = [
     {
         id: 8,
         type: 'map',
-        name: 'Me alegro',
+        name: 'Vector Handling Report',
         status: 'uploaded',
         position: [22, -23],
         owner: 2,
@@ -135,7 +135,7 @@ export const db: ICustomObject[] = [
     {
         id: 9,
         type: 'map',
-        name: 'Y yo tambien',
+        name: 'Very Cool File',
         status: 'uploaded',
         position: [17, -14],
         owner: 4,
@@ -145,7 +145,7 @@ export const db: ICustomObject[] = [
     {
         id: 10,
         type: 'shape',
-        name: 'Muchas gracias',
+        name: 'Very long name project',
         status: 'uploaded',
         position: [33, 13],
         owner: 4,
@@ -155,7 +155,7 @@ export const db: ICustomObject[] = [
     {
         id: 11,
         type: 'map',
-        name: 'De nada',
+        name: 'Personal & Confidential Data',
         status: 'in-progress',
         position: [90, 90],
         owner: 4,

@@ -17,6 +17,7 @@ button,
     border: none;
     padding: 5px 10px;
     background-color: $indigo;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
     font-weight: 500;
@@ -34,4 +35,10 @@ button,
 ::selection {
     background-color: $orange;
     color: $white;
+}
+
+.box {
+    border: 2px solid $indigo;
+    border-radius: 10px;
+    @include box-shadow(0, 5px, 15px, rgba($black, .15));
 }

@@ -78,34 +78,36 @@ const SingleProject = ({ match }: RouteChildrenProps) => {
                 </div>
                 <img src="/img/map.png" alt="Placeholder map of Madrid" />
             </div>
-            <div className="creation-container">
-                <p className='bold'>Created by:</p>
-                {owner && (
-                    <div className="owner-container">
-                        <div className="avatar">
-                            <img src={owner.avatar} alt={owner.name} />
+            <div className="bottom-container">
+                <div className="creation-container">
+                    <p className='bold'>Created by:</p>
+                    {owner && (
+                        <div className="owner-container">
+                            <div className="avatar">
+                                <img src={owner.avatar} alt={owner.name} />
+                            </div>
+                            <div className="text-container">
+                                <h3 className='name'>{myId === owner.id ? 'Me' : owner.name}</h3>
+                                <p>
+                                    <span className="orange colored">
+                                        Created at:&nbsp;
+                                </span>
+                                    <span className="bold blue-gray colored">
+                                        {moment(project.creationDate).format('DD/MM/YYYY HH:mm')}
+                                    </span>
+                                </p>
+                                <p>
+                                    <span className="orange colored">
+                                        Last edition:&nbsp;
+                                </span>
+                                    <span className="bold blue-gray colored">
+                                        {moment(project.lastEditDate).format('DD/MM/YYYY HH:mm')}
+                                    </span>
+                                </p>
+                            </div>
                         </div>
-                        <div className="text-container">
-                            <h3 className='name'>{myId === owner.id ? 'Me' : owner.name}</h3>
-                            <p>
-                                <span className="orange colored">
-                                    Created at:&nbsp;
-                                </span>
-                                <span className="bold blue-gray colored">
-                                    {moment(project.creationDate).format('DD/MM/YYYY HH:mm')}
-                                </span>
-                            </p>
-                            <p>
-                                <span className="orange colored">
-                                    Last edition:&nbsp;
-                                </span>
-                                <span className="bold blue-gray colored">
-                                    {moment(project.lastEditDate).format('DD/MM/YYYY HH:mm')}
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                )}
+                    )}
+                </div>
             </div>
         </div>
     );

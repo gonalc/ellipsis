@@ -15,8 +15,27 @@
                     padding: 20px;
                     width: 100%;
                     transition: all .3s ease-in-out;
+                    position: relative;
                     &.active {
                         background-color: $blue;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        left: 10px;
+                        width: 1px;
+                        height: 100%;
+                        max-height: 0;
+                        transition: max-height .3s ease-in-out;
+                        background-color: white;
+                    }
+                    &:hover {
+                        &::before {
+                            max-height: 70%;
+                        }
                     }
                 }
             }
