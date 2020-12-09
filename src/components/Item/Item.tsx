@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Item.scss';
 import { faCheck, faHourglassHalf, faMap, faShapes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import Status from '../Status/Status';
 
 type ItemProps = {
     project: ICustomObject;
@@ -33,10 +34,11 @@ const Item = ({ project }: ItemProps) => {
             </div>
             <div className="info-container">
                 <div className="status">
-                    <div className="icon">
+                    <Status status={project.status} />
+                    {/* <div className={`icon ${project.status}`}>
                         <FontAwesomeIcon icon={project.status === 'uploaded' ? faCheck : faHourglassHalf} />
                     </div>
-                    <p className="status-text text-normal">{project.status === 'uploaded' ? 'Uploaded' : 'In progress'}</p>
+                    <p className="status-text text-normal">{project.status === 'uploaded' ? 'Uploaded' : 'In progress'}</p> */}
                 </div>
             </div>
             <div className="settings-container">

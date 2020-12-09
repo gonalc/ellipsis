@@ -4,8 +4,9 @@
     height: 100vh;
     display: flex;
     .content {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
+        .name {
+            padding-left: 20px;
+            color: $orange;
+        }
     }
 }

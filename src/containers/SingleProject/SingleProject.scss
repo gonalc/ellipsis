@@ -1,0 +1,79 @@
+@import "public/styles/colors";
+
+.SingleProject {
+    box-sizing: border-box;
+    padding: 20px;
+    .title-container {
+        display: flex;
+        align-items: stretch;
+        .fav-container {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            svg {
+                path {
+                    fill: $red;
+                }
+            }
+        }
+        h1 {
+            color: $indigo;
+            margin: 0;
+            .vertical-separator {
+                color: $orange;
+            }
+            .project-type {
+                color: $blue-gray;
+            }
+        }
+    }
+    .status-container {
+        max-width: 150px;
+    }
+    .map-container {
+        width: 800px;
+        height: 380px;
+        position: relative;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        .pin-container {
+            position: absolute;
+            border: 2px solid $red;
+            border-radius: 2000px;
+            padding: 10px;
+            svg {
+                path {
+                    fill: $red;
+                }
+            }
+        }
+    }
+    .creation-container {
+        p, h3 {
+            color: $indigo;
+        }
+        .owner-container {
+            display: flex;
+            align-items: center;
+            .avatar {
+                overflow: hidden;
+                width: 80px;
+                height: 80px;
+                border-radius: 3000px;
+                margin-right: 20px;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .text-container {
+                p,
+                .name {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

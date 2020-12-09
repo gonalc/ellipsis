@@ -1,0 +1,33 @@
+@import "public/styles/colors";
+
+.Status {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .icon {
+        svg {
+            path {
+                fill: $blue-gray;
+            }
+        }
+        &.in-progress {
+            transform-origin: 50% 50%;
+            animation: spin 1s ease-in-out infinite;
+        }
+    }
+    .status-text {
+        color: $blue-gray;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

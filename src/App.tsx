@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { RouteProps, withRouter } from 'react-router-dom';
+import { Route, RouteProps, Switch, withRouter } from 'react-router-dom';
 import './App.scss';
 import Item from './components/Item/Item';
 import Sidebar from './components/Sidebar/Sidebar';
+import Projects from './containers/Projects/Projects';
+import SingleProject from './containers/SingleProject/SingleProject';
 import { db, getProjectById, login } from './data';
 import { ICustomObject, IUser } from './models';
 
@@ -42,12 +44,11 @@ function App({ location }: RouteProps) {
     <div className="App">
       <Sidebar />
       <div className="content">
-        {projects.map((project) => (
-          <Item
-            project={project}
-            key={project.id}
-          />
-        ))}
+        {myself && <h1 className='name'>Hello, {myself.name}</h1>}
+        <Switch>
+          <Route path='/project/:project_id' render={() => <SingleProject />} />
+          <Route path='/' render={() => <Projects projects={projects} />} />
+        </Switch>
       </div>
     </div>
   );

@@ -35,23 +35,6 @@
             }
         }
     }
-    .info-container {
-        .status {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            .icon {
-                svg {
-                    path {
-                        fill: $blue-gray;
-                    }
-                }
-            }
-            .status-text {
-                color: $blue-gray;
-            }
-        }
-    }
     .settings-container {
         display: flex;
         justify-content: center;
