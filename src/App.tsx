@@ -28,7 +28,6 @@ function App({ location }: RouteProps) {
       // Find my own projects
       displayProjects = db.filter((f) => f.owner === myself!.id);
     }
-    console.log({ displayProjects });
     setProjects([...displayProjects]);
   }
 

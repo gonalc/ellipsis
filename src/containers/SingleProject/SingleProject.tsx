@@ -21,9 +21,7 @@ const SingleProject = ({ match }: RouteChildrenProps) => {
     useEffect(() => {
         if (project_id) {
             const foundProject = db.find((p) => p.id === Number(project_id));
-            console.log({ foundProject });
             const foundOwner = users.find((user) => user.id === foundProject!.owner);
-            console.log({ foundOwner });
             setOwner(foundOwner);
             setProject(foundProject);
         }
