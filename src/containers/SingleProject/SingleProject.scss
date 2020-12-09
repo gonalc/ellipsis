@@ -52,6 +52,9 @@
                 }
             }
         }
+        @media screen and (max-width: $break-mobile) {
+            width: 100%;
+        }
     }
     .bottom-container {
         display: flex;

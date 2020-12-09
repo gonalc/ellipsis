@@ -7,5 +7,11 @@
         height: 100vh;
         width: 100%;
         overflow: scroll;
+        box-sizing: border-box;
+        .mobile-title {
+            text-align: center;
+            margin-bottom: 10px;
+            color: $indigo;
+        }
     }
 }

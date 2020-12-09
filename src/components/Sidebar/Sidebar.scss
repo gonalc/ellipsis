@@ -1,10 +1,12 @@
 @import 'public/styles/colors';
+@import 'public/styles/general';
 
 .Sidebar {
     width: 250px;
     flex-shrink: 0;
     background-color: $indigo;
     color: $white;
+    transition: all .3s ease-in-out;
     nav {
         ul {
             li {
@@ -39,6 +41,49 @@
                     }
                 }
             }
+        }
+    }
+    @media screen and (max-width: $break-mobile) {
+        transform: translateX(-250px);
+        width: 0;
+        &.on {
+            transform: translateX(0);
+            width: 100vw;
+        }
+    }
+}
+
+.burger-menu {
+    width: 30px;
+    height: 30px;
+    border-radius: 2000px;
+    background-color: $indigo;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+    cursor: pointer;
+    .bar {
+        width: 15px;
+        height: 2px;
+        background-color: $white;
+        margin: 1px 0;
+        transition: all .3s ease-in-out;
+        transform-origin: 50% 50%;
+    }
+    &.on {
+        .top {
+            transform: translateY(4px) rotate(45deg);
+        }
+        .middle {
+            opacity: 0;
+        }
+        .bottom {
+            transform: translateY(-4px) rotate(-45deg);
         }
     }
 }

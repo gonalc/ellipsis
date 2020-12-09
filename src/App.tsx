@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect, Route, RouteProps, Switch, withRouter } from 'react-router-dom';
 import './App.scss';
-import Item from './components/Item/Item';
 import Sidebar from './components/Sidebar/Sidebar';
 import Projects from './containers/Projects/Projects';
 import SingleProject from './containers/SingleProject/SingleProject';
 import { db, getProjectById, login } from './data';
 import { ICustomObject, IUser } from './models';
+import useScreenSize from './hooks/screen-size';
 
 function App({ location }: RouteProps) {
   const [myself, setMyself] = useState<IUser>();
   const [projects, setProjects] = useState<ICustomObject[]>([]);
+  const { isMobile } = useScreenSize();
 
   const getProjects = () => {
     const { pathname } = location!;
@@ -44,6 +45,7 @@ function App({ location }: RouteProps) {
     <div className="App">
       <Sidebar />
       <div className="content">
+        {isMobile && <h1 className='mobile-title'>Ellipsis</h1>}
         <Switch>
           <Route path='/project/:project_id' render={() => <SingleProject />} />
           <Route path='/projects' render={() => <Projects projects={projects} />} />

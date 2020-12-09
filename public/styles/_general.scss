@@ -1,6 +1,9 @@
 @import 'public/styles/colors';
 @import 'public/styles/css3-mixins';
 
+$break-mobile: 768px;
+$break-tablet: 1024px;
+
 img {
     width: 100%;
     height: auto;

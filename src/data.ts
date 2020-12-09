@@ -20,6 +20,9 @@ export const getProjectById = (id: number): ICustomObject => {
     return result!;
 }
 
+/**
+ * Emulates a Users DB
+ */
 export const users: IUser[] = [
     {
         id: 1,
@@ -51,6 +54,9 @@ export const users: IUser[] = [
     },
 ];
 
+/**
+ * Emulates a projects DB
+ */
 export const db: ICustomObject[] = [
     {
         id: 1,
