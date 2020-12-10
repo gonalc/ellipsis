@@ -13,7 +13,7 @@ type ItemProps = {
 }
 
 const Item = ({ project }: ItemProps) => (
-    <Link to={`/project/${project.id}`} className='Item'>
+    <div className='Item'>
         <header>
             <h3 className={`title text-center ${project.name.length > 8 ? 'small-title' : ''}`}>
                 {project.name}
@@ -34,12 +34,14 @@ const Item = ({ project }: ItemProps) => (
             </div>
         </div>
         <div className="settings-container">
-            <button className="btn">See more</button>
+            <Link to={`/project/${project.id}`}>
+                <button className="btn">See more</button>
+            </Link>
             <div className="settings-handler-container">
                 <SettingsMenu onCard />
             </div>
         </div>
-    </Link>
+    </div>
 );
 
 export default Item;
