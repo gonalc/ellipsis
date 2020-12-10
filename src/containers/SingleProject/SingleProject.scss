@@ -18,10 +18,10 @@
             }
         }
         h1 {
-            color: $indigo;
+            color: $primary-dark;
             margin: 0;
             .vertical-separator {
-                color: $orange;
+                color: $secondary-light;
             }
             .project-type {
                 color: $blue-gray;
@@ -36,20 +36,21 @@
         height: 380px;
         position: relative;
         z-index: -1;
-        @extend .box;
         overflow: hidden;
+        @extend .box;
         img {
             height: 100%;
             object-fit: cover;
         }
         .pin-container {
             position: absolute;
-            border: 2px solid $red;
+            border: 2px solid $secondary-dark;
             border-radius: 2000px;
             padding: 10px;
+            background-color: rgba($white, .7);
             svg {
                 path {
-                    fill: $red;
+                    fill: $secondary-dark;
                 }
             }
         }
@@ -66,7 +67,7 @@
             max-width: 800px;
             @extend .box;
             p, h3 {
-                color: $indigo;
+                color: $primary-dark;
             }
             .owner-container {
                 display: flex;
@@ -77,13 +78,16 @@
                     height: 80px;
                     border-radius: 3000px;
                     margin-right: 20px;
-                    border: 1px solid $orange;
+                    border: 1px solid $secondary-light;
                     img {
                         height: 100%;
                         object-fit: cover;
                     }
                 }
                 .text-container {
+                    .edition-label {
+                        color: $secondary-light;
+                    }
                     p,
                     .name {
                         margin: 0;

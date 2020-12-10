@@ -19,29 +19,29 @@ button,
 .btn {
     border: none;
     padding: 5px 10px;
-    background-color: $indigo;
-    border-radius: 5px;
+    background-color: $primary-light;
+    border-radius: 4px;
     color: white;
     cursor: pointer;
     font-weight: 500;
-    transition: box-shadow .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+    text-transform: uppercase;
     &:focus {
         outline: none;
     }
     &:hover,
     &:active,
     &:focus {
-        @include box-shadow(0, 0, 0, 2px, $orange);
+        background-color: $primary-main;
     }
 }
 
 ::selection {
-    background-color: $orange;
+    background-color: $secondary-light;
     color: $white;
 }
 
 .box {
-    border: 2px solid $indigo;
-    border-radius: 10px;
-    @include box-shadow(0, 5px, 15px, rgba($black, .15));
+    border-radius: 4px;
+    @include box-shadow(0, 2px, 4px, rgba($black, .15));
 }

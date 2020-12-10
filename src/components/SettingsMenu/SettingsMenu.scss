@@ -14,7 +14,7 @@
         background-color: $white;
         padding: 10px;
         border-radius: 300px;
-        @include box-shadow(0, 5px, 15px, rgba($indigo, .25));
+        @include box-shadow(0, 5px, 15px, rgba($primary-dark, .25));
         transition: box-shadow .3s ease-in-out;
         svg {
             transition: transform .3s ease-in-out;
@@ -23,7 +23,7 @@
             }
         }
         &:hover {
-            @include box-shadow(0, 5px, 15px, rgba($indigo, .35));
+            @include box-shadow(0, 5px, 15px, rgba($primary-dark, .35));
         }
     }
     .menu-container {
@@ -38,7 +38,7 @@
             li {
                 padding: 10px;
                 transition: all .3s ease-in-out;
-                color: $indigo;
+                color: $primary-dark;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
@@ -46,8 +46,8 @@
                     margin-right: 10px;
                 }
                 &:hover {
-                    color: $orange;
-                    background-color: $light-gray;
+                    color: $white;
+                    background-color: $primary-light;
                 }
             }
         }

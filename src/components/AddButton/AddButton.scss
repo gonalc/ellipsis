@@ -8,16 +8,16 @@
     width: 50px;
     height: 50px;
     border-radius: 3000px;
-    background-color: $indigo;
+    background-color: $secondary-dark;
     color: $white;
     font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    @include box-shadow(0, 5px, 15px, rgba($indigo, .25));
+    @include box-shadow(0, 5px, 15px, rgba($primary-dark, .25));
     transition: box-shadow .3s ease-in-out;
     cursor: pointer;
     &:hover {
-        @include box-shadow(0, 5px, 15px, rgba($indigo, .35));
+        @include box-shadow(0, 5px, 15px, rgba($primary-dark, .35));
     }
 }

@@ -89,7 +89,7 @@ const SingleProject = ({ match }: RouteChildrenProps) => {
                             <div className="text-container">
                                 <h3 className='name'>{myId === owner.id ? 'Me' : owner.name}</h3>
                                 <p>
-                                    <span className="orange colored">
+                                    <span className="edition-label">
                                         Created at:&nbsp;
                                 </span>
                                     <span className="bold blue-gray colored">
@@ -97,7 +97,7 @@ const SingleProject = ({ match }: RouteChildrenProps) => {
                                     </span>
                                 </p>
                                 <p>
-                                    <span className="orange colored">
+                                    <span className="edition-label">
                                         Last edition:&nbsp;
                                 </span>
                                     <span className="bold blue-gray colored">

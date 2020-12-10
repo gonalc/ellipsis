@@ -48,9 +48,6 @@ a {
     color: unset;
     text-decoration: none;
     transition: color .3s ease-in-out;
-    &:hover {
-        color: $orange;
-    }
 }
 
 .colored {

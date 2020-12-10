@@ -3,7 +3,7 @@ import { ICustomObject } from '../../models';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './Item.scss';
-import { faMap, faShapes } from '@fortawesome/free-solid-svg-icons';
+import { faDrawPolygon, faMap, faShapes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import Status from '../Status/Status';
 import SettingsMenu from '../SettingsMenu/SettingsMenu';
@@ -13,7 +13,7 @@ type ItemProps = {
 }
 
 const Item = ({ project }: ItemProps) => (
-    <div className='Item'>
+    <Link to={`/project/${project.id}`} className='Item'>
         <header>
             <h3 className={`title text-center ${project.name.length > 8 ? 'small-title' : ''}`}>
                 {project.name}
@@ -24,7 +24,7 @@ const Item = ({ project }: ItemProps) => (
         </header>
         <div className="main-icon-container">
             <FontAwesomeIcon
-                icon={project.type === 'map' ? faMap : faShapes}
+                icon={project.type === 'map' ? faMap : faDrawPolygon}
                 size="3x"
             />
         </div>
@@ -34,14 +34,12 @@ const Item = ({ project }: ItemProps) => (
             </div>
         </div>
         <div className="settings-container">
-            <Link to={`/project/${project.id}`}>
-                <button className="btn">See more</button>
-            </Link>
+            <button className="btn">See more</button>
             <div className="settings-handler-container">
                 <SettingsMenu onCard />
             </div>
         </div>
-    </div>
+    </Link>
 );
 
 export default Item;

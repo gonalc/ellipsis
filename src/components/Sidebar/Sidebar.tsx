@@ -1,3 +1,5 @@
+import { faFolder, faStar, faUserFriends } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import useScreenSize from '../../hooks/screen-size';
@@ -36,6 +38,9 @@ const Sidebar = ({ avatar, name }: SidebarProps) => {
                                 activeClassName='active'
                                 onClick={() => setShow(false)}
                             >
+                                <div className="icon-container">
+                                    <FontAwesomeIcon icon={faFolder} />
+                                </div>
                                 My Projects
                             </NavLink>
                         </li>
@@ -46,6 +51,9 @@ const Sidebar = ({ avatar, name }: SidebarProps) => {
                                 activeClassName='active'
                                 onClick={() => setShow(false)}
                             >
+                                <div className="icon-container">
+                                    <FontAwesomeIcon icon={faUserFriends} />
+                                </div>
                                 Shared with me
                         </NavLink>
                         </li>
@@ -56,6 +64,9 @@ const Sidebar = ({ avatar, name }: SidebarProps) => {
                                 activeClassName='active'
                                 onClick={() => setShow(false)}
                             >
+                                <div className="icon-container">
+                                    <FontAwesomeIcon icon={faStar} />
+                                </div>
                                 Favorites
                             </NavLink>
                         </li>
